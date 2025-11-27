@@ -416,3 +416,14 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Virtual Machines
+*.vdi
+*.vmdk
+*.vbox
+*.vmx
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
