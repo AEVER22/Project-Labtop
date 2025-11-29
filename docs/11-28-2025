@@ -1,0 +1,79 @@
+## Homelab Build & Documentation
+### Overview
+This repository documents the full setup, configuration, and troubleshooting journey of building a virtualized homelab environment. The goal of this project is to practice real-world cybersecurity and systems administration tasks using Windows Server 2012, Windows 10, and Kali Linux inside a controlled virtual network.
+The lab includes:
+- A Windows Server 2012 domain controller
+- A Windows 10 workstation
+- A Kali Linux attack box
+- A fully isolated internal network ("Labnet")
+This documentation is written to demonstrate technical ability, problem-solving, and practical IT experience for employers and future projects.
+### Lab Architecture
+Virtualization Platform: VirtualBox
+Internal Network Name: Labnet
+Purpose: Isolated test environment for Windows Server, Windows 10, and Kali Linux
+
+## Activity Log
+Below is the day-by-day timeline of building the lab, including steps taken, problems encountered, and how they were resolved.
+
+
+# docs/28-11-2025.md
+
+## November 28th, 2025
+### Goal
+Continue the homelab setup by configuring the Windows 10 workstation and preparing the Kali Linux machine.
+
+### Windows 10 Setup
+The virtual machine was created with the following specifications:
+- 30GB hard drive
+- 4GB RAM
+- 2 CPU cores
+- Internal network adapter assigned to Labnet
+
+### Kali Linux Setup
+The Virtual Machince was created with the following specifications:
+- 50GB hard drive
+- 3GB RAM
+- 2 CPU cores
+- Internal network adapter was assigned to Labnet
+
+### Timeline
+8:37 AM — Windows 10 installation completed successfully.
+
+8:41 AM — Performed initial connectivity test by pinging the domain controller. The test failed.
+
+8:49 AM — Ping attempts continued to fail with the error "Ping transmit failed. General Failure".
+
+8:52 AM — Ran ipconfig and observed that the system had an auto-assigned 169.x.x.x address, indicating that it was not connected to Labnet.
+
+8:53 AM — Switched from dynamic to static addressing to correct the issue.
+
+9:01 AM — Assigned a static IPv4 address and default gateway. Connectivity to the domain controller was restored.
+
+9:02 AM — Repeated ping tests. All requests were returned with no packet loss.
+
+9:03 AM — Joined the Windows 10 machine to the lab.net domain using domain administrator credentials.
+
+9:22 AM — Enabled file sharing and ICMP echo request rules in Windows Defender Firewall for domain traffic.
+
+11:37 AM — Returned from a break and found the system unable to authenticate with the domain due to incorrect credentials.
+
+11:47 AM — Corrected a keyboard input issue caused by a reversed caps lock state. Domain authentication succeeded.
+
+11:53 AM — Verified stable domain connectivity and prepared to set up the Kali Linux machine.
+
+12:01 PM — Noted that connectivity checks will be performed routinely during machine startup using ping tests and network status verification.
+
+12:22 PM — Created the Kali Linux virtual machine with 4GB RAM and 2 CPU cores.
+
+5:01 PM — Configured a static IP address on the Kali system and verified successful communication with the domain controller.
+
+5:05 PM — Updated the system resolver configuration and confirmed consistent packet delivery when pinging the domain controller.
+
+5:32 PM — Encountered a connectivity issue where Kali could communicate with the domain controller but not with the Windows 10 workstation.
+
+5:46 PM — Performed additional testing. Windows 10 could ping Kali, but Kali could not ping Windows 10. Identified a possible firewall configuration issue.
+
+5:51 PM — Enabled the ICMP echo request inbound rule for the domain network profile on Windows 10. Full communication between Kali and Windows 10 was restored.
+
+### Summary
+All three systems are now fully configured and communicating correctly. The lab environment is functional and ready for further use with traffic analysis and Active Directory tasks etc.
