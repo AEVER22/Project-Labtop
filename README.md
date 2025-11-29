@@ -14,13 +14,13 @@ WELCOME TO PROJECT LABTOP
 - 2 CPU cores
 
 # Windows Server 2012
--30 GB storage
--4 GB RAM
--2 CPU cores
--GUI installation
+- 30 GB storage
+- 4 GB RAM
+- 2 CPU cores
+- GUI installation
 
 # Windows 10 Enterprise
--40 GB storage
--4 GB RAM
--2 CPU cores
--Enterprise installation
+- 40 GB storage
+- 4 GB RAM
+- 2 CPU cores
+- Enterprise installation
