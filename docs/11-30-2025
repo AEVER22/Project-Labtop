@@ -1,4 +1,24 @@
+## Homelab Build & Documentation
+
+### Overview
+This repository documents the full setup, configuration, and troubleshooting journey of building a virtualized homelab environment. The goal of this project is to practice real-world cybersecurity and systems administration tasks using Windows Server 2012, Windows 10, and Kali Linux inside a controlled virtual network.
+The lab includes:
+- A Windows Server 2012 domain controller
+- A Windows 10 workstation
+- A Kali Linux attack box
+- A fully isolated internal network ("Labnet")
+This documentation is written to demonstrate technical ability, problem-solving, and practical IT experience for employers and future projects.
+
+### Lab Architecture
+Virtualization Platform: VirtualBox
+Internal Network Name: Labnet
+Purpose: Isolated test environment for Windows Server, Windows 10, and Kali Linux
+
+## Activity Log
+Below is the day-by-day timeline of building the lab, including steps taken, problems encountered, and how they were resolved.
+
 ## November 30th, 2025
+
 ### Goal
 Build a realistic Active Directory environment by creating organizational units, user accounts, administrative structures and service accounts.
 
