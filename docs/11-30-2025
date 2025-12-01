@@ -1,0 +1,39 @@
+## November 30th, 2025
+### Goal
+Build a realistic Active Directory environment by creating organizational units, user accounts, administrative structures and service accounts.
+
+### Organizational Unit Structure
+The initial task involved designing a clear OU structure suitable for administrative tasks and future testing. The following OUs were created:
+- LABNET-Users
+- LABNET-ServiceAccounts
+- LABNET-Admins
+- LABNET-Computers
+- LABNET-Servers
+
+### Timeline
+9:23 AM — Started the virtual machines and ran ipconfig in PowerShell to confirm that all network configurations remained consistent. All settings were correct.
+
+9:28 AM — Began creating organizational units. An initial mistake resulted in nested units being placed inside another OU unintentionally. Corrected the error by removing the misplaced entries and recreating the OUs.
+
+9:37 AM — Successfully created all primary organizational units.
+
+9:42 AM — Moved the Windows 10 workstation from the default Computers container to LABNET-Computers. Reviewed the system properties, including operating system information and domain membership.
+
+9:45 AM — Added four employee accounts to the LABNET-Users OU.
+
+9:56 AM — Created an administrator account in the LABNET-Admins OU. Assigned the account membership in the following groups:
+- Domain Admins
+- Domain Users
+- Enterprise Admins
+- Group Policy Creator Owners
+- Server Operators
+
+10:06 AM — Created departmental groups in LABNET-Users to simulate internal organizational structure. Added the appropriate users to the IT, Marketing and Finance groups.
+
+10:13 AM — Created a service account in the LABNET-ServiceAccounts OU. This account will be used for:
+- Kerberoasting demonstrations
+- Constrained delegation testing
+- Service misconfiguration scenarios
+
+### Summary
+The Active Directory environment now includes a structured OU design, department-based groups, standard user accounts, administrative accounts and a functional service account. This provides a realistic and extensible foundation for future security testing and configuration work.
